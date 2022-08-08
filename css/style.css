@@ -1,0 +1,88 @@
+body, p {
+  padding: 0;
+  margin: 0;
+  font-size: 1.5rem;
+  font-style: italic;
+  color: #fff;
+  text-align: center;
+}
+
+h1 {
+  color: dimgray;
+}
+
+.grid-container {
+  /* O container vai ocupar 80% da tela disponível. */
+  width: 80%;
+  border-radius: 40px;
+  margin: 0 auto;
+  /* Usado para trabalhar com containers de grade. */
+  display: grid;
+  /* Usado para criar blocos de colunas.. */
+  grid-template-columns: 3fr 1fr;
+  /* Usado para criar blocos de linhas. */
+  grid-template-rows: 100px 450px 150px;
+  /* Usado para definir as areas dos blocos. */
+  grid-template-areas: 'header header' 
+                       'section aside'
+                       'footer footer';
+}
+
+header {
+  /* Está referenciando a area do grid-template-areas. */
+  grid-area: header;
+  background-color: dodgerblue;
+  /* Usado para trabalhar com bloco flexíveis. */
+  display: flex;
+  /* Está alterando o alinhamento horizontal. */
+  justify-content: center;
+  /* Está alterando o alinhamento vertical. */
+  align-items: center;
+}
+
+section {
+  /* Está referenciando a area do grid-template-areas. */
+  grid-area: section;
+  background-color: brown;
+  /* Usado para trabalhar com bloco flexíveis. */
+  display: flex;
+  /* Está alterando o alinhamento horizontal. */
+  justify-content: center;
+  /* Está alterando o alinhamento vertical. */
+  align-items: center;
+}
+
+aside {
+  /* Está referenciando a area do grid-template-areas. */
+  grid-area: aside;
+  background-color: coral;
+  /* Usado para trabalhar com bloco flexíveis. */
+  display: flex;
+  /* Está alterando o alinhamento horizontal. */
+  justify-content: center;
+  /* Está alterando o alinhamento vertical. */
+  align-items: center;
+}
+
+footer {
+  /* Está referenciando a area do grid-template-areas. */
+  grid-area: footer;
+  background-color: darkblue;
+  /* Usado para trabalhar com bloco flexíveis. */
+  display: flex;
+  /* Está alterando o alinhamento vertical. */
+  align-items: center;
+}
+
+.caixa1, .caixa2, .caixa3 {
+  background-color:cadetblue;
+  /* Os elementos vai ocupar 25% do espaço disponível. */
+  width: 25%;
+  padding: 5px;
+}
+
+.caixa2 {
+  /* O elemento vai ocupar 50% do espaço disponível. */
+  width: 50%;
+  margin: 0 2px;
+}
